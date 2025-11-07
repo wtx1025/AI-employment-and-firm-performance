@@ -61,7 +61,22 @@ We use job-posting data purchased from Lightcast. The dataset contains standard 
 </details>  
 
 ### 1.2 Procedures  
-1. Explode each record by parsing the `skills_name` field (e.g., pipe-delimited) to create one row per (job_id, skill).
+1. Explode each record by parsing the `skills_name` field (e.g., pipe-delimited) to create one row per (job_id, skill). For example:
+   <details>
+  <summary><b>Yearly record counts (2010–2025)</b></summary>
+
+| ID    | skills_name      |        
+|:----: |------------------|
+| 12345 | Python|Stata|C++ |
+
+| ID    | skills_name  |        
+|:----: |--------------|
+| 12345 | Python       |
+| 12345 | Stata        |
+| 12345 | C++          |
+
+</details>  
+
 2. Group the data by skill to compute (i) the total frequency of each skill and (ii) its co-occurrence count with AI terms.  
 
 
