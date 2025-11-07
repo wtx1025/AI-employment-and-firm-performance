@@ -90,5 +90,7 @@ w_{s}^{AI} = \frac{\text{\# jobs with } s \text{ and AI terms}}{\text{\# jobs wi
 4. Given skill-level AI scores, we compute a job-level AI score ($w_j^{AI}$) by averaging the AI scores of all required skills for job $j$. If job $j$ requires skills $A$, $B$, and $C$ with $w_A^{AI}=0.5$, $w_B^{AI}=0.7$, and $w_C^{AI}=0.3$, then:
 ```math
 w_{j}^{AI} = \frac{0.5 + 0.7 + 0.3}{3} = 0.5
-``` 
+```
+5. Transform the continuous AI score into a binary indicator by defining each job $j$ as AI-related if the measure $w_{j}^{AI}$ is above 0.1.
+6. 
 
