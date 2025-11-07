@@ -13,8 +13,8 @@ We use job-posting data purchased from Lightcast. The dataset contains standard 
         <ul>
           <li><code>parquet/</code>
             <ul>
-              <li><code>jobs_2010_01.parquet</code></li>
-              <li><code>jobs_2010_02.parquet</code></li>
+              <li><code>part.0.parquet</code></li>
+              <li><code>part.1.parquet</code></li>
             </ul>
           </li>
         </ul>
@@ -26,8 +26,8 @@ We use job-posting data purchased from Lightcast. The dataset contains standard 
         <ul>
           <li><code>parquet/</code>
             <ul>
-              <li><code>jobs_2011_01.parquet</code></li>
-              <li><code>jobs_2011_02.parquet</code></li>
+              <li><code>part.0.parquet</code></li>
+              <li><code>part.1.parquet</code></li>
             </ul>
           </li>
         </ul>
