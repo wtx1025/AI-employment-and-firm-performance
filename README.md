@@ -4,8 +4,12 @@ This guide documents the data sources, variable construction, and step-by-step p
 In this section, we detail how we construct the firm-level AI measure from job-postings data. We begin with a description of the data, then outline the procedures and explain the purpose and functions of each code file. Finally, we present the replication results.  
 ### 1.1 Data Description  
 We use job-posting data purchased from Lightcast. The dataset contains standard fields such as company name, job title, and required skills, spanning 2010–2025. Because the raw pulls from Lightcast arrive as multiple extracts, we reorganize them with basic OS-level file operations. Specifically, we create a top-level directory `jobs_by_year` with subdirectories `2010`, `2011`, …, `2025`; each subdirectory holds multiple Parquet files with the original records. This structure makes it easier to manage and process the large volume of data. Below, we report the record counts by year:  
-| Year | Records        |
-|:----:|----------------|
-| 2025 | Lightcast      |
-| 2024 | OpenAI         |
-| 2023 | ACME Corp.     |
+<details>
+  <summary><b>Yearly record counts</b></summary>
+
+| Year | Records  |
+|----:|---------:|
+| 2010| 123,456  |
+| 2011| 234,567  |
+
+</details>
