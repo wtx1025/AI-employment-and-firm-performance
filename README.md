@@ -103,5 +103,7 @@ w_{j}^{AI} = \frac{0.5 + 0.7 + 0.3}{3} = 0.5
 
 ### 1.4 Replication Result  
 In this section, we replicate Figure 1(b) from [Babina et al. (2024)](https://www.sciencedirect.com/science/article/pii/S0304405X2300185X). Please refer to the paper for more details.  
-![Replication]("C:\\Users\\王亭烜\\Downloads\\replication.jpg")
+![Replication]("C:\\Users\\王亭烜\\Downloads\\replication.jpg")  
+
+## 2. Résumé
 
