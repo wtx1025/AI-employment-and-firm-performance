@@ -61,7 +61,7 @@ We use job-posting data purchased from Lightcast. The dataset contains standard 
 </details>  
 
 ### 1.2 Procedures  
-1. Explode each record by parsing the `skills_name` field (e.g., pipe-delimited) to create one row per (job_id, skill). For example:
+1. Explode each record by parsing the `skills_name` field (e.g., pipe-delimited) to create one row per (job_id, skill).  
    <details>
       <summary><b>Example: before → after</b></summary>
 
