@@ -5,6 +5,38 @@ In this section, we detail how we construct the firm-level AI measure from job-p
 ### 1.1 Data Description  
 We use job-posting data purchased from Lightcast. The dataset contains standard fields such as company name, job title, and required skills, spanning 2010–2025. Because the raw pulls from Lightcast arrive as multiple extracts, we reorganize them with basic OS-level file operations. Specifically, we create a top-level directory `jobs_by_year` with subdirectories `2010`, `2011`, …, `2025`; each subdirectory holds multiple Parquet files with the original records. This structure makes it easier to manage and process the large volume of data. Below, we report the record counts by year:  
 <details>
+  <summary><b>jobs_by_year/</b></summary>
+  <ul>
+    <li>
+      <details>
+        <summary><code>2010/</code></summary>
+        <ul>
+          <li><code>parquet/</code>
+            <ul>
+              <li><code>jobs_2010_01.parquet</code></li>
+              <li><code>jobs_2010_02.parquet</code></li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary><code>2011/</code></summary>
+        <ul>
+          <li><code>parquet/</code>
+            <ul>
+              <li><code>jobs_2011_01.parquet</code></li>
+              <li><code>jobs_2011_02.parquet</code></li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+    </li>
+    <li><code>...</code></li>
+  </ul>
+</details>
+<details>
   <summary><b>Yearly record counts (2010–2025)</b></summary>
 
 | Year | Count        |
