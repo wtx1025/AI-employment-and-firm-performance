@@ -81,6 +81,7 @@ We use job-posting data purchased from Lightcast. The dataset contains standard 
 
     </details>
 
-2. Group the data by skill to compute (i) the total frequency of each skill and (ii) its co-occurrence count with AI terms.  
+2. Group the data by skill to compute (i) the total frequency of each skill and (ii) its co-occurrence count with AI terms.
+3. Step (1) and (2) are conducted in year, so we have to aggregate to all the year. As long as we get the number a skill appears and its co-occurrence time with key AI terms, we can calculate its AI score ($w_{s}^{AI}$). Specifically, $w_{s}^{AI}$ is calculated as  
 
 
