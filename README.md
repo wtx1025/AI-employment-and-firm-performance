@@ -92,5 +92,5 @@ w_{s}^{AI} = \frac{\text{\# jobs with } s \text{ and AI terms}}{\text{\# jobs wi
 w_{j}^{AI} = \frac{0.5 + 0.7 + 0.3}{3} = 0.5
 ```
 5. Transform the continuous AI score into a binary indicator by defining each job $j$ as AI-related if the measure $w_{j}^{AI}$ is above 0.1.
-6. 
+6. The firm-level measure $Share_{f,t}^{AI}$ is defined as the fraction of job by firm $f$ in year $t$ that are AI-related.
 
