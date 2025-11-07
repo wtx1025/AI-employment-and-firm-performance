@@ -95,5 +95,5 @@ w_{j}^{AI} = \frac{0.5 + 0.7 + 0.3}{3} = 0.5
 6. The firm-level measure $Share_{f,t}^{AI}$ is defined as the fraction of job by firm $f$ in year $t$ that are AI-related.
 
 ### 1.3 Code Files  
-*`01_extract_term1`: This code does step (1) and step (2). Specifically, the users have to key in YEAR= in order to assign the program to do calculation in specific year. If YEAR=2010, then the program will output `2010_skills_counts_co.parquet` under folder `out`. 
+* `01_extract_term1`: This code does step (1) and step (2). Specifically, the users have to key in YEAR= in order to assign the program to do calculation in specific year. If YEAR=2010, then the program will output `2010_skills_counts_co.parquet` under folder `out`. 
 
