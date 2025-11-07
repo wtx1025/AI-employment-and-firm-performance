@@ -84,10 +84,6 @@ We use job-posting data purchased from Lightcast. The dataset contains standard 
 2. Group the data by skill to compute (i) the total frequency of each skill and (ii) its co-occurrence count with AI terms.
 3. Step (1) and (2) are executed by year and then aggregated across all years. Once we have, for each skill $s$, its total appearances and its co-occurrences with AI terms, we compute the AI score $w_{S}^{AI}$. Specifically,  
    
-$$
-w_{s}^{AI}
-=
-\frac{\text{\# of jobs requiring skill } s \text{ and (ML, NLP, CV, or AI in required skills)}}
-     {\text{\# of jobs requiring skill } s}
-$$
+```math
+w_{s}^{AI} = \frac{\text{\# jobs with } s \text{ and AI terms}}{\text{\# jobs with } s}
 
