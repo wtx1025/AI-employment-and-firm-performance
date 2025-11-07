@@ -87,7 +87,7 @@ We use job-posting data purchased from Lightcast. The dataset contains standard 
 ```math
 w_{s}^{AI} = \frac{\text{\# jobs with } s \text{ and AI terms}}{\text{\# jobs with } s}
 ```
-4. Since we have AI score for each skill, we can calculate AI score for each job ($w_{j}^{AI}$) by averaging the AI score of the skills needed. For example, if a job j needs skill A, B, and C, while $w_{A}^{AI}=0.5$, $w_{B}^{AI}=0.7$, and $w_{C}^{AI}=0.3$, then we can calculate $w_{j}^{AI}$ as
+4. Given skill-level AI scores, we compute a job-level AI score \(w_j^{AI}\) by averaging the AI scores of all required skills for job \(j\). If job \(j\) requires skills \(A\), \(B\), and \(C\) with \(w_A^{AI}=0.5\), \(w_B^{AI}=0.7\), and \(w_C^{AI}=0.3\), then:
 ```math
 w_{j}^{AI} = \frac{0.5 + 0.7 + 0.3}{3} = 0.5
 ``` 
