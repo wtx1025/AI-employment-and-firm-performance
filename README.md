@@ -95,5 +95,5 @@ w_{j}^{AI} = \frac{0.5 + 0.7 + 0.3}{3} = 0.5
 6. The firm-level measure $Share_{f,t}^{AI}$ is defined as the fraction of job by firm $f$ in year $t$ that are AI-related.
 
 ### 1.3 Code Files  
-* `01_extract_term1`: This code does step (1) and step (2). Specifically, the users have to key in YEAR= in order to assign the program to do calculation in specific year. If YEAR=2010, then the program will output `2010_skills_counts_co.parquet` under folder `out`. 
+* `01_extract_term1`: This code executes steps (1) and (2) for a specified year: it explodes the `skills_name` field into one row per `(ID, skill)`, then aggregates per-skill totals and AI co-occurrences. To use it, set `YEAR` (e.g., `year=2010`) to process that year; the script writes the result to the `out/` directory as `YYYY_skills_counts_co.parquet`. For example, with `YEAR=2010`, it produces `out/2010_skills_counts_co.parquet`, which contains every skill appears in that year, its number of appearance, and it number of co-occurrence with key AI terms.  
 
