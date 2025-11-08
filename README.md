@@ -128,5 +128,13 @@ The résumé data used in this section also comes from Lightcast. We additionall
     | 12345 | Product Manager     | 2023   |
     | 12345 | Product Manager     | 2024   |
 
-    </details>
+    </details>  
+
+2. Using the keyword list in `top100_ai_skills_all_years.parquet`, we check whether each row's `title_name` or `description_raw` contains any listed term. If a match is found, we record the first matching term and mark the observation as `ai_related=1`.
+3. Finally, we aggregate by `company_name` and `year`. For each firm-year, we compute our AI measure as the share of employees classified as AI-related: the number of AI-related employees divided by the total number of employees. See example:  
+### 2.3 Code Files  
+* `04_resume.py`: This code implements steps (1)-(3). It expands each profile into one row per year using `JOB_START_YM` and `JOB_END_YM`, classifies each row as AI-related or non-AI-related, and then aggregates to a firm-year AI measure. The input is a sample résumé data, and the script outupts a single firm-year file containing all firns in the sample with their corresponding AI measure. When the full dataset becomes available, users can reuse this code with minor adjustments (e.g., updating file paths or iterating over multiple input files).
+
+**If you have any questions about the calculation details, please reach out or check the code. I've written it for clarity and included detailed comments.**  
+
 
