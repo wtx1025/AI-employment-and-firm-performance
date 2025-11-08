@@ -108,4 +108,5 @@ In this section, we replicate Figure 1(b) from [Babina et al. (2024)](https://ww
 ## 2. Résumé  
 In this section, we develop a firm-level AI measure from résumé data. We first describe the dataset, then outline the computational steps used to obtain the measure, and finally provide a brief overview of the code files.  
 ### 2.1 Data Description  
+The résumé data used in this section also comes from Lightcast. We additionally rely on the file `top100_ai_skills_all_years.parquet` generated in the previous section. Because we have not yet received the full dataset, we use a sample of profiles from Lightcast as input. Once the full data is available, the same code can be applied with only minor adjustments.  
 
