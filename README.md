@@ -110,5 +110,23 @@ In this section, we develop a firm-level AI measure from résumé data. We first
 ### 2.1 Data Description  
 The résumé data used in this section also comes from Lightcast. We additionally rely on the file `top100_ai_skills_all_years.parquet` generated in the previous section. Because we have not yet received the full dataset, we use a sample of profiles from Lightcast as input. Once the full data is available, the same code can be applied with only minor adjustments. The key variables are `title_name` and `description_raw`. Using these fields, we classify each profile as AI-related or non-AI-related by checking whether they contain any AI terms listed in `top100_ai_skills_all_years.parquet`.  
 ### 2.2 Procedures  
-1. We expand each profile into one row per year between the job's start and end dates. This lets us classify an employee as AI-related or non-AI-related in each calendar year.  
+1. We expand each profile into one row per year between the job's start and end dates. This lets us classify an employee as AI-related or non-AI-related in each calendar year.
+   <details>
+      <summary><b>Example: before → after</b></summary>
+
+    **Before (one row)**
+
+    | ID    | title_name           | JOB_START_YM   | JOB_END_YM   |
+    |:----: |----------------------|----------------|--------------|
+    | 12345 | Product Manager      | 2022-08        | 2024-05      |
+
+    **After (exploded to one row per year)**
+
+    | ID    | title_name          | YEAR   | 
+    |:----: |---------------------|--------|
+    | 12345 | Product Manager     | 2022   |
+    | 12345 | Product Manager     | 2023   |
+    | 12345 | Product Manager     | 2024   |
+
+    </details>
 
