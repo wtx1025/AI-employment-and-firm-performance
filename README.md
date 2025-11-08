@@ -134,8 +134,8 @@ The résumé data used in this section also comes from Lightcast. We additionall
 3. Finally, we aggregate by `company_name` and `year`. For each firm-year, we compute our AI measure as the share of employees classified as AI-related: the number of AI-related employees divided by the total number of employees. See example from the result:   
 ### 2.3 Code Files  
 * `04_resume.py`: This code implements steps (1)-(3). It expands each profile into one row per year using `JOB_START_YM` and `JOB_END_YM`, classifies each row as AI-related or non-AI-related, and then aggregates to a firm-year AI measure. The input is a sample résumé data, and the script outupts a single firm-year file containing all firns in the sample with their corresponding AI measure. When the full dataset becomes available, users can reuse this code with minor adjustments (e.g., updating file paths or iterating over multiple input files).
-<img src="replication.jpg" alt="resume1" width="400">
-<img src="replication.jpg" alt="resume2" width="400"> 
+<img src="resume1.jpg" alt="resume1" width="400">
+<img src="resume2.jpg" alt="resume2" width="400"> 
 
 **If you have any questions about the calculation details, please reach out or check the code. I've written it for clarity and included detailed comments.**  
 
