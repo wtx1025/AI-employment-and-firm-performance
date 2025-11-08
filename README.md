@@ -106,5 +106,6 @@ In this section, we replicate Figure 1(b) from [Babina et al. (2024)](https://ww
 <img src="replication.jpg" alt="Replication" width="400">   
 
 ## 2. Résumé  
-(To be continued)
+In this section, we develop a firm-level AI measure from résumé data. We first describe the dataset, then outline the computational steps used to obtain the measure, and finally provide a brief overview of the code files.  
+### 2.1 Data Description  
 
