@@ -138,7 +138,7 @@ The résumé data used in this section also comes from Lightcast. We additionall
 ### 2.3 Code Files  
 * `04_resume_measure.py`: This code implements steps (1)-(3). It expands each profile into one row per year using `most_recent_company_start_month` and `most_recent_company_end_month`, classifies each row as AI-related or non-AI-related, and then aggregates to a firm-year AI measure. The input is a sample résumé data, and the script outupts a single firm-year file containing all firns in the sample with their corresponding AI measure.
 
-Note: `04_resume.py` is the old version code that use the small sample data received from Lightcast. I wrote this script because we did not receive full data until November so I had to do the computation using sample data only. This script is slightly different from `04_resume_measure.py` because of the difference of the data format between sample data and the final data received. Overall, the logic is almost the same. The sample data is provided as `us_profiles_samples_full.csv`.
+Note: `resume.py` is the old version code that use the small sample data received from Lightcast. I wrote this script because we did not receive full data until November so I had to do the computation using sample data only. This script is slightly different from `04_resume_measure.py` because of the difference of the data format between sample data and the final data received. Overall, the logic is almost the same. The sample data is provided as `us_profiles_samples_full.csv`.
 
 **If you have any questions about the calculation details, please reach out or check the code. I've written it for clarity and included detailed comments.**  
 
