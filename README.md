@@ -142,7 +142,9 @@ Note: `04_resume.py` is the old version code that use the small sample data rece
 
 **If you have any questions about the calculation details, please reach out or check the code. I've written it for clarity and included detailed comments.**  
 
-## 3. Supplementary Materials  
+## 3. Program execution steps and parameter settings 
+
+## 4. Supplementary Materials  
 In our analysis, we mainly use DuckDB to manipulate the data. DuckDB is an in-process, analytics-focused SQL database that runs inside our application without a server and without setup. It uses columnar storage and vectorized execution, so aggregations, joins, and window functions run quickly on large files. It can read and write CSV and Parquet directly and it works smoothly with DataFrames in Python. This makes it well suited for reproducible data pipelines where you clean, transform, and export data in a single lightweight script. Please refer to the [documentation](https://duckdb.org/docs/stable/clients/python/overview) for further details.
 
 
