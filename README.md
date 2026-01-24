@@ -108,7 +108,7 @@ In this section, we replicate Figure 1(b) from [Babina et al. (2024)](https://ww
 ## 2. Résumé  
 In this section, we develop a firm-level AI measure from résumé data. We first describe the dataset, then outline the computational steps used to obtain the measure, and finally provide a brief overview of the code files.  
 ### 2.1 Data Description  
-The résumé data used in this section also comes from Lightcast. We additionally rely on the file `top100_ai_skills_all_years.parquet` generated in the previous section. The key variables are `title_raw` and `description_raw`. Using these fields, we classify each profile as AI-related or non-AI-related by checking whether they contain any AI terms listed in `top100_ai_skills_all_years.parquet`.  
+The résumé data used in this section also comes from Lightcast. We additionally rely on the file `top100_ai_skills_all_years.parquet` generated in the previous section. In the USB, the folder `Profile` contains many parquet files, which store the resume data. However, the main variable `description_raw` is given separately so we put it in the folder `Description`, where there are many parquet files in it. We write some codes and merge the description data with the profile (resume) data, and store it in the file `merged.parquet`. The key variables are `title_raw` and `description_raw`. Using these fields, we classify each profile as AI-related or non-AI-related by checking whether they contain any AI terms listed in `top100_ai_skills_all_years.parquet`.  
 ### 2.2 Procedures  
 1. We expand each profile into one row per year between the job's start and end dates. This lets us classify an employee as AI-related or non-AI-related in each calendar year.
    <details>
