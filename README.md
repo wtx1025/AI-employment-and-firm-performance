@@ -145,6 +145,7 @@ Note: `resume.py` is the old version code that use the small sample data receive
 ## 3. Program Execution Steps and Parameter Settings 
 ### 3.1 Job Posting Measure  
 **Step 1.** Open `01_extract_term1.py` and modify variable `ROOT_DIR` to match the location of the USB drive on your computer (e.g., `r"E:\\jobs_by_year"` or `r"D:\\jobs_by_year"`). Do the same for variable `OUT_DIR` and `TMP_DIR`. It is recommended to keep the folder names unchanged and only modify the drive letter (e.g.,change E: to D: if needed). Then set variable `YEAR` to the target year (2010, 2011,...,2024) and run the script. Each execution processes one year only, so repeat this step for all years. 
+**Step 2.** Open `02_extract_term2.py` and update `OUT_DIR` and `TMP_DIR` in the same way as in Step 1. Then run the script. This script outputs the AI-related key terms.
 
 ## 4. Supplementary Materials  
 In our analysis, we mainly use DuckDB to manipulate the data. DuckDB is an in-process, analytics-focused SQL database that runs inside our application without a server and without setup. It uses columnar storage and vectorized execution, so aggregations, joins, and window functions run quickly on large files. It can read and write CSV and Parquet directly and it works smoothly with DataFrames in Python. This makes it well suited for reproducible data pipelines where you clean, transform, and export data in a single lightweight script. Please refer to the [documentation](https://duckdb.org/docs/stable/clients/python/overview) for further details.
