@@ -150,7 +150,12 @@ Note: `resume.py` is the old version code that use the small sample data receive
 
 **Step 3.** Open `03_jp_measure.py` and modify `ROOT_DIR`, `OUT_DIR`, and `TMP_DIR` in the same way as in Step 1 and 2. Then set variable `YEAR` to the target year (2010, 2011,...,2024) and run the script. Each execution processes one year only, so repeat this step for all years.  
 
-**Step 4.** Open `05_link_with_compustat.ipynb` and modify th file paths to (i) the Compustat link table and (ii) the year-specific datasets generated in Step 3. Running the JOB POSTING section in the notebook will merge the Compustat identifier (GVKEY) into each observation. Each run processes one year, so repeat this step for all years.  
+**Step 4.** Open `05_link_with_compustat.ipynb` and modify the file paths to (i) the Compustat link table and (ii) the year-specific datasets generated in Step 3. Running the JOB POSTING section in the notebook will merge the Compustat identifier (GVKEY) into each observation. Each run processes one year, so repeat this step for all years. 
+
+### 3.2 Résumé Measure 
+**Step 1.** Open `04_resume_measure.py` and modify variable `INPUT_PATH` to match the location of the USB drive on your computer (e.g.,`r"E:\\merged.parquet"` ot `r"D:\\merged.parquet"`). Do the same for variable `KEYWORDS_PARQUET`, `OUT_PARQUET`, `OUT_PARQUET_FLAG`, and `OUT_PARQUET_COMP`. It is recommended to keep the folder names unchanged and only modify the drive letter (e.g.,change E: to D: if needed). Then run the script. This script will generate the firm-year level AI measure directly to `temp2.parquet`.  
+
+**Step 2.** Open `05_link_with_compustat.ipynb` and modify the file paths to (i) the Compustat link table and (ii) the datasets generated in Step 1. Running the RESUME section in the notebook will merge the Compustat identifier (GVKEY) into each observation and output the data as `reume_compustat.parquet`.
 
 ## 4. Supplementary Materials  
 In our analysis, we mainly use DuckDB to manipulate the data. DuckDB is an in-process, analytics-focused SQL database that runs inside our application without a server and without setup. It uses columnar storage and vectorized execution, so aggregations, joins, and window functions run quickly on large files. It can read and write CSV and Parquet directly and it works smoothly with DataFrames in Python. This makes it well suited for reproducible data pipelines where you clean, transform, and export data in a single lightweight script. Please refer to the [documentation](https://duckdb.org/docs/stable/clients/python/overview) for further details.
